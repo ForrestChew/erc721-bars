@@ -6,10 +6,6 @@ import {Item2} from "../src/Item2.sol";
 import {ScriptConstants} from "./ScriptConstants.s.sol";
 
 contract Item2Deployment is Script, ScriptConstants {
-    function setUp() public {
-        
-    }
-
     function run() public {
         uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
         vm.startBroadcast(deployerPrivateKey);
