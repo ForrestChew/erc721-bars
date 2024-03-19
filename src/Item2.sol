@@ -39,7 +39,7 @@ contract Item2 is ERC721, ReentrancyGuard {
      *                   then the ID of the new BarERC721 token that is minted will be mapped 
      *                   to BAR A and stored off chain.     
      */
-    function forge(uint256 oreId1, uint256 oreId2) external nonReentrant {
+    function forge(uint256 oreId1, uint256 oreId2) external nonReentrant returns (uint256) {
         if (
             oreMirror.ownerOf(oreId1) != msg.sender || 
             oreMirror.ownerOf(oreId2) != msg.sender
@@ -53,6 +53,7 @@ contract Item2 is ERC721, ReentrancyGuard {
         _safeMint(msg.sender, _nextTokenId); 
 
         emit BarForged(msg.sender, _nextTokenId, oreId1, oreId2);
+        return _nextTokenId;
     }
 
     function _baseURI() internal view override returns (string memory) {
