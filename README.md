@@ -12,7 +12,7 @@ Misc Info.
 Blast Sepolia --
 Item2 address: 0xE294CE02B25658E670A6646ff3B6155629904BdF
 OreMirror:     0xDDCFc252d2Fd666AEd9242cBbD0aa6aab67cF8fa
-RPC URL:       "https://sepolia.blast.io
+RPC URL:       https://sepolia.blast.io
 ```
 
 ## Setup
