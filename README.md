@@ -31,17 +31,17 @@ forge test
 
 ## Interacting with Contract using Ethers.js
 
-The following is some boiler plate code using Typescript and Ethers.js that can be used to interact with the Item2.sol contract. You can find the `ITEM2_ABI` in the `Item2Abi.json` file within this repo. <br>
+The following is some boiler plate code using Typescript and Ethers.js that can be used to interact with an on chain contract. You can find the `ITEM2_ABI` in the `Item2Abi.json` file within this repo. <br>
 
 Using Ethers v6
 
 ```
 const main = async () => {
-  const provider = new ethers.JsonRpcProvider("https://sepolia.blast.io");
-  const ITEM2_ADDRESS = "0x67C2FBcEa5dB736682f893333C4138e0aD34C14F";
-  const item2 = new ethers.Contract(ITEM2_ADDRESS, ITEM2_ABI, provider);
+  const provider = new ethers.JsonRpcProvider(RPC_URL);
+  const contractAddress = "0x000...";
+  const contract = new ethers.Contract(contractAddress, ABI, provider);
 
-  console.log("Item2 name:", await item2.name());
+  console.log("Contract Function:", await contract.nameOfFunction());
 };
 main();
 ```
@@ -50,13 +50,11 @@ Using Ethers v5
 
 ```
 const main = async () => {
-  const provider = new ethers.providers.JsonRpcProvider(
-    "https://sepolia.blast.io"
-  );
-  const ITEM2_ADDRESS = "0x67C2FBcEa5dB736682f893333C4138e0aD34C14F";
-  const item2 = new ethers.Contract(ITEM2_ADDRESS, ITEM2_ABI, provider);
+  const provider = new ethers.providers.JsonRpcProvider(RPC_URL);
+  const contractAddress = "0x000...";
+  const contract = new ethers.Contract(contractAddress, ABI, provider);
 
-  console.log("Item2 name:", await item2.name());
+  console.log("Contract Function:", await contract.nameOfFunction());
 };
 main();
 ```
