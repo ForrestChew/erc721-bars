@@ -37,10 +37,7 @@ contract Item2 is ERC721, ReentrancyGuard {
      *                 Example: 
      *                   If the combination of ORE tokens 1 and 2 is pre-determined to be BAR A,
      *                   then the ID of the new BarERC721 token that is minted will be mapped 
-     *                   to BAR A and stored off chain. 
-     * @dev          - We are using the ReentrancyGuard to prevent reentrancy attacks when 
-     *                 the function invoker is a contract, as that would call the onERC721Received 
-     *                 function on that contract, which could be malicious.      
+     *                   to BAR A and stored off chain.     
      */
     function forge(uint256 oreId1, uint256 oreId2) external nonReentrant {
         if (
