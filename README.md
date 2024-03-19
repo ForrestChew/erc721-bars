@@ -1,5 +1,5 @@
 ## Summary
-The following repo contains a contract that works in tandem with the OreMirror contract. The idea of this contract is to allow users to burn two owned ORE NFTs in exchange for one freshly minted BAR NFT. This is accomplished through the function called `forge(uint256 oreId1, uint256 oreId2)`. The user must be the owner of both the ORE NFTs whose IDs the they pass to the `forge` function. If they are not the owner, the TX will revert. <br>
+The following repo contains a contract that works in tandem with the OreMirror contract. The idea of this contract is to allow users to burn two owned ORE NFTs in exchange for one freshly minted BAR NFT. This is accomplished through the function called `forge(uint256 oreId1, uint256 oreId2)`. The user must be the owner of both the ORE NFTs whose IDs they pass to the `forge` function. If they are not the owner, the TX will revert. <br>
 
 There is nothing at the contract level that links the freshly minted NFTs to a BAR type. The idea is to use the on chain ID when it is minted to link it to a Bar type off chain. <br>
 <br>
